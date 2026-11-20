@@ -1,0 +1,903 @@
+{
+  "generatedAt": "2026-11-20T07:21:35.510Z",
+  "sampleCount": 6,
+  "gate": {
+    "minAfterTotal": 70,
+    "minMeanDelta": 15,
+    "minSampleDelta": 8,
+    "maxDimensionDrop": 10,
+    "maxAfterChars": 2500,
+    "maxLengthRatio": 20
+  },
+  "gateFailures": [],
+  "passed": true,
+  "meanBefore": 31.3,
+  "meanAfter": 81.2,
+  "meanDelta": 49.8,
+  "dimensionMeans": [
+    {
+      "id": "structure",
+      "zh": "结构化",
+      "en": "Structure",
+      "before": 26,
+      "after": 80,
+      "delta": 54
+    },
+    {
+      "id": "constraints",
+      "zh": "角色与约束",
+      "en": "Role & constraints",
+      "before": 20,
+      "after": 85,
+      "delta": 65
+    },
+    {
+      "id": "context",
+      "zh": "上下文",
+      "en": "Context",
+      "before": 25,
+      "after": 69,
+      "delta": 44
+    },
+    {
+      "id": "concise",
+      "zh": "精简",
+      "en": "Concision",
+      "before": 94,
+      "after": 100,
+      "delta": 6
+    },
+    {
+      "id": "format",
+      "zh": "输出格式",
+      "en": "Output format",
+      "before": 28,
+      "after": 90,
+      "delta": 62
+    },
+    {
+      "id": "examples",
+      "zh": "示例",
+      "en": "Examples",
+      "before": 0,
+      "after": 60,
+      "delta": 60
+    }
+  ],
+  "rows": [
+    {
+      "id": "zh-casual-bug",
+      "label": "口语化报障",
+      "before": {
+        "total": 16,
+        "dimensions": [
+          {
+            "id": "structure",
+            "score": 15,
+            "note": "无结构标记"
+          },
+          {
+            "id": "constraints",
+            "score": 10,
+            "note": "无角色或约束"
+          },
+          {
+            "id": "context",
+            "score": 5,
+            "note": "缺背景与目的"
+          },
+          {
+            "id": "concise",
+            "score": 65,
+            "note": "填充词 3 处、模糊请求 1 处"
+          },
+          {
+            "id": "format",
+            "score": 0,
+            "note": "未约定输出格式"
+          },
+          {
+            "id": "examples",
+            "score": 0,
+            "note": "无示例"
+          }
+        ],
+        "chars": 36,
+        "estTokens": 18
+      },
+      "after": {
+        "total": 83,
+        "dimensions": [
+          {
+            "id": "structure",
+            "score": 80,
+            "note": "Markdown 标题、7 条列表项、6 段"
+          },
+          {
+            "id": "constraints",
+            "score": 85,
+            "note": "角色设定、5 条硬性约束"
+          },
+          {
+            "id": "context",
+            "score": 70,
+            "note": "交代背景、技术/业务语境"
+          },
+          {
+            "id": "concise",
+            "score": 100,
+            "note": "无冗余，密度良好"
+          },
+          {
+            "id": "format",
+            "score": 100,
+            "note": "要求输出、指定格式、限定长度"
+          },
+          {
+            "id": "examples",
+            "score": 60,
+            "note": "提及示例"
+          }
+        ],
+        "chars": 362,
+        "estTokens": 181
+      },
+      "delta": 67,
+      "lengthRatio": 10.06,
+      "dimensions": [
+        {
+          "id": "structure",
+          "zh": "结构化",
+          "en": "Structure",
+          "weight": 0.2,
+          "before": 15,
+          "after": 80,
+          "delta": 65
+        },
+        {
+          "id": "constraints",
+          "zh": "角色与约束",
+          "en": "Role & constraints",
+          "weight": 0.2,
+          "before": 10,
+          "after": 85,
+          "delta": 75
+        },
+        {
+          "id": "context",
+          "zh": "上下文",
+          "en": "Context",
+          "weight": 0.15,
+          "before": 5,
+          "after": 70,
+          "delta": 65
+        },
+        {
+          "id": "concise",
+          "zh": "精简",
+          "en": "Concision",
+          "weight": 0.15,
+          "before": 65,
+          "after": 100,
+          "delta": 35
+        },
+        {
+          "id": "format",
+          "zh": "输出格式",
+          "en": "Output format",
+          "weight": 0.15,
+          "before": 0,
+          "after": 100,
+          "delta": 100
+        },
+        {
+          "id": "examples",
+          "zh": "示例",
+          "en": "Examples",
+          "weight": 0.15,
+          "before": 0,
+          "after": 60,
+          "delta": 60
+        }
+      ],
+      "worstDrop": 35,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "zh-export-api",
+      "label": "需求口述",
+      "before": {
+        "total": 25,
+        "dimensions": [
+          {
+            "id": "structure",
+            "score": 15,
+            "note": "无结构标记"
+          },
+          {
+            "id": "constraints",
+            "score": 10,
+            "note": "无角色或约束"
+          },
+          {
+            "id": "context",
+            "score": 35,
+            "note": "技术/业务语境"
+          },
+          {
+            "id": "concise",
+            "score": 100,
+            "note": "无冗余，密度良好"
+          },
+          {
+            "id": "format",
+            "score": 0,
+            "note": "未约定输出格式"
+          },
+          {
+            "id": "examples",
+            "score": 0,
+            "note": "无示例"
+          }
+        ],
+        "chars": 28,
+        "estTokens": 14
+      },
+      "after": {
+        "total": 83,
+        "dimensions": [
+          {
+            "id": "structure",
+            "score": 80,
+            "note": "Markdown 标题、7 条列表项、6 段"
+          },
+          {
+            "id": "constraints",
+            "score": 85,
+            "note": "角色设定、6 条硬性约束"
+          },
+          {
+            "id": "context",
+            "score": 70,
+            "note": "交代背景、技术/业务语境"
+          },
+          {
+            "id": "concise",
+            "score": 100,
+            "note": "无冗余，密度良好"
+          },
+          {
+            "id": "format",
+            "score": 100,
+            "note": "要求输出、指定格式、限定长度"
+          },
+          {
+            "id": "examples",
+            "score": 60,
+            "note": "提及示例"
+          }
+        ],
+        "chars": 466,
+        "estTokens": 233
+      },
+      "delta": 58,
+      "lengthRatio": 16.64,
+      "dimensions": [
+        {
+          "id": "structure",
+          "zh": "结构化",
+          "en": "Structure",
+          "weight": 0.2,
+          "before": 15,
+          "after": 80,
+          "delta": 65
+        },
+        {
+          "id": "constraints",
+          "zh": "角色与约束",
+          "en": "Role & constraints",
+          "weight": 0.2,
+          "before": 10,
+          "after": 85,
+          "delta": 75
+        },
+        {
+          "id": "context",
+          "zh": "上下文",
+          "en": "Context",
+          "weight": 0.15,
+          "before": 35,
+          "after": 70,
+          "delta": 35
+        },
+        {
+          "id": "concise",
+          "zh": "精简",
+          "en": "Concision",
+          "weight": 0.15,
+          "before": 100,
+          "after": 100,
+          "delta": 0
+        },
+        {
+          "id": "format",
+          "zh": "输出格式",
+          "en": "Output format",
+          "weight": 0.15,
+          "before": 0,
+          "after": 100,
+          "delta": 100
+        },
+        {
+          "id": "examples",
+          "zh": "示例",
+          "en": "Examples",
+          "weight": 0.15,
+          "before": 0,
+          "after": 60,
+          "delta": 60
+        }
+      ],
+      "worstDrop": 0,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "en-upload-500",
+      "label": "英文 bug 报告",
+      "before": {
+        "total": 30,
+        "dimensions": [
+          {
+            "id": "structure",
+            "score": 15,
+            "note": "无结构标记"
+          },
+          {
+            "id": "constraints",
+            "score": 10,
+            "note": "无角色或约束"
+          },
+          {
+            "id": "context",
+            "score": 35,
+            "note": "技术/业务语境"
+          },
+          {
+            "id": "concise",
+            "score": 100,
+            "note": "无冗余，密度良好"
+          },
+          {
+            "id": "format",
+            "score": 30,
+            "note": "要求输出"
+          },
+          {
+            "id": "examples",
+            "score": 0,
+            "note": "无示例"
+          }
+        ],
+        "chars": 69,
+        "estTokens": 35
+      },
+      "after": {
+        "total": 83,
+        "dimensions": [
+          {
+            "id": "structure",
+            "score": 80,
+            "note": "Markdown 标题、8 条列表项、6 段"
+          },
+          {
+            "id": "constraints",
+            "score": 85,
+            "note": "角色设定、4 条硬性约束"
+          },
+          {
+            "id": "context",
+            "score": 70,
+            "note": "交代背景、技术/业务语境"
+          },
+          {
+            "id": "concise",
+            "score": 100,
+            "note": "无冗余，密度良好"
+          },
+          {
+            "id": "format",
+            "score": 100,
+            "note": "要求输出、指定格式、限定长度"
+          },
+          {
+            "id": "examples",
+            "score": 60,
+            "note": "提及示例"
+          }
+        ],
+        "chars": 910,
+        "estTokens": 455
+      },
+      "delta": 53,
+      "lengthRatio": 13.19,
+      "dimensions": [
+        {
+          "id": "structure",
+          "zh": "结构化",
+          "en": "Structure",
+          "weight": 0.2,
+          "before": 15,
+          "after": 80,
+          "delta": 65
+        },
+        {
+          "id": "constraints",
+          "zh": "角色与约束",
+          "en": "Role & constraints",
+          "weight": 0.2,
+          "before": 10,
+          "after": 85,
+          "delta": 75
+        },
+        {
+          "id": "context",
+          "zh": "上下文",
+          "en": "Context",
+          "weight": 0.15,
+          "before": 35,
+          "after": 70,
+          "delta": 35
+        },
+        {
+          "id": "concise",
+          "zh": "精简",
+          "en": "Concision",
+          "weight": 0.15,
+          "before": 100,
+          "after": 100,
+          "delta": 0
+        },
+        {
+          "id": "format",
+          "zh": "输出格式",
+          "en": "Output format",
+          "weight": 0.15,
+          "before": 30,
+          "after": 100,
+          "delta": 70
+        },
+        {
+          "id": "examples",
+          "zh": "示例",
+          "en": "Examples",
+          "weight": 0.15,
+          "before": 0,
+          "after": 60,
+          "delta": 60
+        }
+      ],
+      "worstDrop": 0,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "zh-sales-drop",
+      "label": "数据分析",
+      "before": {
+        "total": 27,
+        "dimensions": [
+          {
+            "id": "structure",
+            "score": 15,
+            "note": "无结构标记"
+          },
+          {
+            "id": "constraints",
+            "score": 10,
+            "note": "无角色或约束"
+          },
+          {
+            "id": "context",
+            "score": 5,
+            "note": "缺背景与目的"
+          },
+          {
+            "id": "concise",
+            "score": 100,
+            "note": "无冗余，密度良好"
+          },
+          {
+            "id": "format",
+            "score": 40,
+            "note": "指定格式"
+          },
+          {
+            "id": "examples",
+            "score": 0,
+            "note": "无示例"
+          }
+        ],
+        "chars": 22,
+        "estTokens": 11
+      },
+      "after": {
+        "total": 78,
+        "dimensions": [
+          {
+            "id": "structure",
+            "score": 80,
+            "note": "Markdown 标题、7 条列表项、6 段"
+          },
+          {
+            "id": "constraints",
+            "score": 85,
+            "note": "角色设定、3 条硬性约束"
+          },
+          {
+            "id": "context",
+            "score": 70,
+            "note": "交代背景、说明目的"
+          },
+          {
+            "id": "concise",
+            "score": 100,
+            "note": "无冗余，密度良好"
+          },
+          {
+            "id": "format",
+            "score": 70,
+            "note": "要求输出、指定格式"
+          },
+          {
+            "id": "examples",
+            "score": 60,
+            "note": "提及示例"
+          }
+        ],
+        "chars": 376,
+        "estTokens": 188
+      },
+      "delta": 51,
+      "lengthRatio": 17.09,
+      "dimensions": [
+        {
+          "id": "structure",
+          "zh": "结构化",
+          "en": "Structure",
+          "weight": 0.2,
+          "before": 15,
+          "after": 80,
+          "delta": 65
+        },
+        {
+          "id": "constraints",
+          "zh": "角色与约束",
+          "en": "Role & constraints",
+          "weight": 0.2,
+          "before": 10,
+          "after": 85,
+          "delta": 75
+        },
+        {
+          "id": "context",
+          "zh": "上下文",
+          "en": "Context",
+          "weight": 0.15,
+          "before": 5,
+          "after": 70,
+          "delta": 65
+        },
+        {
+          "id": "concise",
+          "zh": "精简",
+          "en": "Concision",
+          "weight": 0.15,
+          "before": 100,
+          "after": 100,
+          "delta": 0
+        },
+        {
+          "id": "format",
+          "zh": "输出格式",
+          "en": "Output format",
+          "weight": 0.15,
+          "before": 40,
+          "after": 70,
+          "delta": 30
+        },
+        {
+          "id": "examples",
+          "zh": "示例",
+          "en": "Examples",
+          "weight": 0.15,
+          "before": 0,
+          "after": 60,
+          "delta": 60
+        }
+      ],
+      "worstDrop": 0,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "en-refactor",
+      "label": "重构请求",
+      "before": {
+        "total": 25,
+        "dimensions": [
+          {
+            "id": "structure",
+            "score": 15,
+            "note": "无结构标记"
+          },
+          {
+            "id": "constraints",
+            "score": 10,
+            "note": "无角色或约束"
+          },
+          {
+            "id": "context",
+            "score": 35,
+            "note": "技术/业务语境"
+          },
+          {
+            "id": "concise",
+            "score": 100,
+            "note": "无冗余，密度良好"
+          },
+          {
+            "id": "format",
+            "score": 0,
+            "note": "未约定输出格式"
+          },
+          {
+            "id": "examples",
+            "score": 0,
+            "note": "无示例"
+          }
+        ],
+        "chars": 42,
+        "estTokens": 21
+      },
+      "after": {
+        "total": 77,
+        "dimensions": [
+          {
+            "id": "structure",
+            "score": 80,
+            "note": "Markdown 标题、5 条列表项、6 段"
+          },
+          {
+            "id": "constraints",
+            "score": 85,
+            "note": "角色设定、3 条硬性约束"
+          },
+          {
+            "id": "context",
+            "score": 65,
+            "note": "技术/业务语境、说明目的"
+          },
+          {
+            "id": "concise",
+            "score": 100,
+            "note": "无冗余，密度良好"
+          },
+          {
+            "id": "format",
+            "score": 70,
+            "note": "要求输出、指定格式"
+          },
+          {
+            "id": "examples",
+            "score": 60,
+            "note": "提及示例"
+          }
+        ],
+        "chars": 795,
+        "estTokens": 398
+      },
+      "delta": 52,
+      "lengthRatio": 18.93,
+      "dimensions": [
+        {
+          "id": "structure",
+          "zh": "结构化",
+          "en": "Structure",
+          "weight": 0.2,
+          "before": 15,
+          "after": 80,
+          "delta": 65
+        },
+        {
+          "id": "constraints",
+          "zh": "角色与约束",
+          "en": "Role & constraints",
+          "weight": 0.2,
+          "before": 10,
+          "after": 85,
+          "delta": 75
+        },
+        {
+          "id": "context",
+          "zh": "上下文",
+          "en": "Context",
+          "weight": 0.15,
+          "before": 35,
+          "after": 65,
+          "delta": 30
+        },
+        {
+          "id": "concise",
+          "zh": "精简",
+          "en": "Concision",
+          "weight": 0.15,
+          "before": 100,
+          "after": 100,
+          "delta": 0
+        },
+        {
+          "id": "format",
+          "zh": "输出格式",
+          "en": "Output format",
+          "weight": 0.15,
+          "before": 0,
+          "after": 70,
+          "delta": 70
+        },
+        {
+          "id": "examples",
+          "zh": "示例",
+          "en": "Examples",
+          "weight": 0.15,
+          "before": 0,
+          "after": 60,
+          "delta": 60
+        }
+      ],
+      "worstDrop": 0,
+      "pass": true,
+      "failures": []
+    },
+    {
+      "id": "zh-already-decent",
+      "label": "已有结构的提示词",
+      "before": {
+        "total": 65,
+        "dimensions": [
+          {
+            "id": "structure",
+            "score": 80,
+            "note": "Markdown 标题、2 条列表项、4 段"
+          },
+          {
+            "id": "constraints",
+            "score": 70,
+            "note": "角色设定、2 条硬性约束"
+          },
+          {
+            "id": "context",
+            "score": 35,
+            "note": "技术/业务语境"
+          },
+          {
+            "id": "concise",
+            "score": 100,
+            "note": "无冗余，密度良好"
+          },
+          {
+            "id": "format",
+            "score": 100,
+            "note": "要求输出、指定格式、限定长度"
+          },
+          {
+            "id": "examples",
+            "score": 0,
+            "note": "无示例"
+          }
+        ],
+        "chars": 87,
+        "estTokens": 44
+      },
+      "after": {
+        "total": 83,
+        "dimensions": [
+          {
+            "id": "structure",
+            "score": 80,
+            "note": "Markdown 标题、5 条列表项、6 段"
+          },
+          {
+            "id": "constraints",
+            "score": 85,
+            "note": "角色设定、4 条硬性约束"
+          },
+          {
+            "id": "context",
+            "score": 70,
+            "note": "交代背景、技术/业务语境"
+          },
+          {
+            "id": "concise",
+            "score": 100,
+            "note": "无冗余，密度良好"
+          },
+          {
+            "id": "format",
+            "score": 100,
+            "note": "要求输出、指定格式、限定长度"
+          },
+          {
+            "id": "examples",
+            "score": 60,
+            "note": "提及示例"
+          }
+        ],
+        "chars": 313,
+        "estTokens": 157
+      },
+      "delta": 18,
+      "lengthRatio": 3.6,
+      "dimensions": [
+        {
+          "id": "structure",
+          "zh": "结构化",
+          "en": "Structure",
+          "weight": 0.2,
+          "before": 80,
+          "after": 80,
+          "delta": 0
+        },
+        {
+          "id": "constraints",
+          "zh": "角色与约束",
+          "en": "Role & constraints",
+          "weight": 0.2,
+          "before": 70,
+          "after": 85,
+          "delta": 15
+        },
+        {
+          "id": "context",
+          "zh": "上下文",
+          "en": "Context",
+          "weight": 0.15,
+          "before": 35,
+          "after": 70,
+          "delta": 35
+        },
+        {
+          "id": "concise",
+          "zh": "精简",
+          "en": "Concision",
+          "weight": 0.15,
+          "before": 100,
+          "after": 100,
+          "delta": 0
+        },
+        {
+          "id": "format",
+          "zh": "输出格式",
+          "en": "Output format",
+          "weight": 0.15,
+          "before": 100,
+          "after": 100,
+          "delta": 0
+        },
+        {
+          "id": "examples",
+          "zh": "示例",
+          "en": "Examples",
+          "weight": 0.15,
+          "before": 0,
+          "after": 60,
+          "delta": 60
+        }
+      ],
+      "worstDrop": 0,
+      "pass": true,
+      "failures": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Prompt optimizer">
+  <rect x="6" y="10" width="52" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="3"/>
+  <path d="M16 24h20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M16 33h12" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+  <path d="M16 42h16" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+  <path d="M44 20l3.2 7 7 3.2-7 3.2-3.2 7-3.2-7-7-3.2 7-3.2z" fill="currentColor" opacity="0.9"/>
+  <path d="M43 38l1.7 3.7 3.7 1.7-3.7 1.7-1.7 3.7-1.7-3.7-3.7-1.7 3.7-1.7z" fill="currentColor" opacity="0.6"/>
+</svg>

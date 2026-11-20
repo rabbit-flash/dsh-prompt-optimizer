@@ -1,0 +1,12 @@
+{
+  "$comment": "Fill in before publishing. build-index.mjs refuses to emit an index while any value still holds a placeholder.",
+  "repository": "https://github.com/OWNER/dsh-prompt-optimizer",
+  "name": "OWNER/dsh-prompt-optimizer",
+  "category": "ui",
+  "npmPackage": "",
+  "commit": "",
+  "description": {
+    "en": "Rewrites the composer draft with the session's own model and shows an estimated before/after prompt quality score across six dimensions.",
+    "zh": "用当前会话模型重写输入框草稿，并给出优化前后六维提示词质量估分对比。"
+  }
+}

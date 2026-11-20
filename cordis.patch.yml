@@ -1,0 +1,4 @@
+# dsh-prompt-optimizer bundle patch: inserts one plugin row into the profile tree.
+- insert:
+    - id: prompt-optimizer
+      name: 'dsh-prompt-optimizer'

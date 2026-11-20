@@ -1,0 +1,38 @@
+[
+  {
+    "id": "zh-casual-bug",
+    "label": "口语化报障",
+    "before": "帮我看看登录页为啥这么慢 那个首屏要四秒多 反正好慢 然后呢我想优化一下",
+    "after": "你是资深前端性能工程师，擅长定位首屏渲染瓶颈。\n\n## 任务\n分析登录页首屏耗时 4.1s 的原因，并给出可执行的优化方案。\n\n## 背景\n- 技术栈：React 18 + Vite，部署在 CDN 后面\n- 现状：首屏 4.1s，用户反馈「很慢」\n- 可观测数据：目前只有总耗时，没有分段耗时\n\n## 要求\n- 必须给出 3 条按收益排序的改动，每条说明预期收益与验证方式\n- 必须给出需要补充采集的性能指标（如 LCP、TTFB）\n- 禁止改动后端接口与数据库\n- 不确定的原因要标注为假设，不得编造数据\n\n## 输出\nMarkdown，三部分：瓶颈假设、改动清单、验证步骤；每条不超过 2 行，总长 300 字以内。\n\n## 示例\n输入：首屏 4.1s，无分段耗时 → 输出：假设 1 图片未压缩（验证：LCP 元素）"
+  },
+  {
+    "id": "zh-export-api",
+    "label": "需求口述",
+    "before": "写个接口把订单导出excel 要能筛选时间 还有最好快点",
+    "after": "你是一名负责订单域的后端工程师。\n\n## 任务\n设计并实现订单导出 Excel 的 HTTP 接口。\n\n## 背景\n- 现有订单表约 200 万行，单次导出常见范围为 1 个月\n- 前端已有时间范围选择器，参数为 startTime / endTime（ISO 8601）\n\n## 要求\n- 必须支持按 startTime、endTime 过滤，缺省为最近 30 天\n- 必须异步导出：接口先返回任务 id，前端凭 id 轮询下载地址\n- 单文件最多 10 万行，超出时按天拆分为多个文件\n- 导出过程不得锁表，禁止在请求线程内同步生成文件\n- 单次导出在 5 万行以内应于 30 秒完成\n\n## 输出\n按顺序给出：接口定义（路径、参数、响应）、表结构与索引建议、异步任务流程、至少 2 个边界情况。用 Markdown 小标题分节。\n\n## 示例\nGET /api/orders/export?startTime=2026-01-01&endTime=2026-01-31 → 202 { \"taskId\": \"t-1001\" }"
+  },
+  {
+    "id": "en-upload-500",
+    "label": "英文 bug 报告",
+    "before": "the api returns 500 sometimes when i upload big files, can you fix it",
+    "after": "You are a backend engineer debugging an upload endpoint.\n\n## Task\nFind the root cause of intermittent HTTP 500 responses on file upload and propose a fix.\n\n## Context\n- Endpoint: POST /api/files, multipart/form-data\n- Fails only for files larger than 50 MB, roughly 1 in 5 attempts\n- Stack: Node 22, Express, files streamed to S3\n- No error log excerpt is available yet\n\n## Requirements\n- List the three most likely causes, ranked by likelihood, each with the log line or metric that would confirm it\n- Must propose a reproducible test for the top cause\n- Do not guess specific stack traces; mark anything unverified as a hypothesis\n- Never suggest disabling the size limit as a fix\n\n## Output\nMarkdown with the sections: Hypotheses, Evidence to collect, Minimal fix. Keep it under 350 words.\n\n## Example\nInput: fails at 50 MB, no logs → Output: Hypothesis 1: request body limit (confirm via 413 in access log)"
+  },
+  {
+    "id": "zh-sales-drop",
+    "label": "数据分析",
+    "before": "分析一下这个月销量下降的原因 数据在csv里",
+    "after": "你是一名电商数据分析师。\n\n## 任务\n定位本月销售额环比下降的主要贡献因素，并给出下一步验证动作。\n\n## 背景\n- 目的：本周五前给到增长团队一份可执行的归因结论，以便调整下月投放\n- 数据：sales.csv，字段 date、sku、channel、orders、gmv、refund_rate\n- 本月 GMV 环比下降，尚不清楚是量还是价的问题\n\n## 要求\n- 必须先做量价拆解：订单量 × 客单价，再拆渠道与品类\n- 每个结论都要给出对应数字与计算口径\n- 数据缺失或异常时明确说明，不得补造数值\n- 结论按贡献度排序，最多 5 条\n\n## 输出\nMarkdown 表格（维度、环比变化、贡献度）+ 3 条结论 + 2 个下一步验证动作。\n\n## 示例\n输出片段：| 渠道 | 环比 | 贡献度 | ｜ 搜索 | -12% | 58% |"
+  },
+  {
+    "id": "en-refactor",
+    "label": "重构请求",
+    "before": "refactor this react component it's too big",
+    "after": "You are a senior React engineer doing a behaviour-preserving refactor.\n\n## Task\nSplit one oversized React component into smaller units without changing behaviour.\n\n## Purpose\nMake the file reviewable before next sprint, so that reviewers can approve it in one pass.\n\n## Requirements\n- Keep every public prop name and its semantics unchanged\n- Extract at most 4 components; name each and state its props\n- Move data fetching into a hook, not into child components\n- Do not introduce new dependencies\n- Call out any state that must be lifted or memoised, and why\n\n## Output\nMarkdown: a component tree, then one code block per extracted file. Keep prose to one line per item.\n\n## Example\nInput: 600-line OrderPage with fetch + table + modal → Output: OrderPage (fetch hook) → OrderTable, OrderModal"
+  },
+  {
+    "id": "zh-already-decent",
+    "label": "已有结构的提示词",
+    "before": "你是技术文档工程师。\n\n## 任务\n把接口变更写进 CHANGELOG。\n\n## 要求\n- 只写变更条目，不要解释\n- 每条不超过一行\n\n## 输出\nMarkdown 列表。",
+    "after": "你是技术文档工程师，负责维护对外 CHANGELOG。\n\n## 任务\n把本次接口变更写进 CHANGELOG 的 Unreleased 段。\n\n## 背景\n- 变更：/v1/orders 的 pageSize 上限由 100 调整为 500\n- 兼容性：向下兼容，旧客户端无需改动\n\n## 要求\n- 只写变更条目，不要解释动机\n- 每条不超过一行，动词开头（Added / Changed / Deprecated）\n- 必须标注影响面（接口、客户端、文档）\n\n## 输出\nMarkdown 列表，最多 3 条。\n\n## 示例\nChanged: /v1/orders 的 pageSize 上限提升至 500（接口，向下兼容）"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Prompt optimizer",
+    "description": "Rewrites the composer draft with the current session model and shows a before/after quality comparison.",
+    "detail": "docs/DETAIL.md"
+  }
+}
